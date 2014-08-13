@@ -9,14 +9,18 @@ Note: For all bookmarlets to work, is necessary to be logged in on trello's page
 Saved Searches
 ==============
 
-This bookmarlet allows you to programatically save a trello search, it is actually a shortcut to a specific search. In order to create a custom search, just create a new marker on to the bookmark bar as many times as different shortcuts you want to make, and edit the function call to pass the apropiate filter.
+This bookmarlet allows you to programatically save a trello search, it is actually a shortcut to a specific search. In order to create a custom search, just create a new marker on to the bookmark bar as many times as different shortcuts you want to make, and edit the function call to pass the apropiate filter. 
 
 
 ```javascript
 javascript:function%20showStatusOpen(filter){$("input.header-search-input"%20).trigger(%20"click"%20);$("input.header-search-input"%20).val(filter);$("input.header-search-input"%20).trigger(%20"keydown"%20);}%20showStatusOpen("YOUR CUSTOM FILTER");
 ```
 
+For example, to search for open tasks with the tag "status" just change it to look like this:
 
+```javascript
+javascript:function%20showStatusOpen(filter){$("input.header-search-input"%20).trigger(%20"click"%20);$("input.header-search-input"%20).val(filter);$("input.header-search-input"%20).trigger(%20"keydown"%20);}%20showStatusOpen("#status is:open");
+```
 
 
 
